@@ -1,0 +1,27 @@
+1 - copiar a pasta do site para wp-content/themes/
+
+2- mudar index.html para index.php
+
+3- adicionar o arquivo de estilo de css na raiz, e colocar informações:
+	/*
+		Theme Name: xxx
+		Theme URI: http://xxxx.com
+		Author: Ricardop@Tiplus
+		Author URI: http://tiplus.com.br
+		Description: Adicione a descrição do tema
+		Version: 1.0
+*/
+
+4- Ativar Tema no Wordpress
+
+5- Corrigiir o caminho do style.css e outros caminhos no functions.php
+	<?php echo get_style_directory_uri() ?> 
+	Função que adiciona caminho até a raiz do sistema
+
+6- Separar header e footer em arquivos header.php e footer.php respectivamente,
+	Adicionar antes de fechar o head: <?php wp_header(); ?>
+	Adicionar antes de fechar o body: <?php wp_footer(); ?>
+	Adicionar header e footer nas páginas do site e renomear para .php
+
+7- começar a substituir o conteúdo por funções de wordpress
+	ex: <?php bloginfo('name'); ?>  => mostra  o nome do blog

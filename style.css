@@ -1,0 +1,16 @@
+/*
+
+Theme name : Kalina Viagens
+Author: Ricardo Paulussi
+Version:1.0.0
+*/
+
+
+
+body{
+    font-family: 'Acme', sans-serif;
+}
+
+.footer-contato-itn{
+    list-style: none;
+}
