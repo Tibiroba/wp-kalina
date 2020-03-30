@@ -1,16 +1,757 @@
 /*
 
-Theme name : Kalina Viagens
+Theme Name: Kalina Viagens
 Author: Ricardo Paulussi
-Version:1.0.0
+Version:1.0.5
+Theme Description: Thema criado para a agencia de viagens Kalina Viagens Perfeitas
+
+
+/*
+
+
+
+/*
+--------------------
+-------CONTROL-------
+--------------------
+*/
+/* latin */
+@font-face {
+  font-family: 'gothicb';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(src/fonts/gothicb.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(src/fonts/GOTHIC.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Edo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(src/fonts/edosz.woff2) format('woff2');
+}
+
+strong{
+  font-family: 'Edo';
+  font-size: 26px;
+}
+
+h1{
+font-family: 'gothicb';
+font-size: 36px;
+text-align: center;
+line-height: 72px;
+font-weight: 700;
+}
+h2{
+font-family: 'gothicb';
+  font-size: 24px;
+  text-align: center;
+  line-height: 54px;
+  font-weight: 700;
+  text-transform:   uppercase;  
+}
+h3{
+font-family: 'gothicb';
+   font-size: 20px; 
+   text-align: center;
+   line-height: 36px;
+   font-weight: 700;
+}
+p{
+  font-size:16px;
+  font-family: 'gothic';
+}
+
+li> a{
+  font-family: 'gothicb';
+}
+
+.divider{
+  margin:10px 0px;
+}
+
+ button{
+  font-size: 16px;
+ }
+body, html{
+    font-family: 'gothic';
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #42493A;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    width:100%;
+    overflow-x:   hidden; 
+}
+
+hr{
+border-top:2px solid #84976C;
+}
+ 
+#atendimento, #pagamento, #auxilio, #exclusividades  > p{
+  letter-spacing: 1.8px;
+  word-spacing: 1.2px;
+
+}
+/*
+--------------------
+-------HEADER-------
+--------------------
+*/
+.carousel-item{
+  height: 100vh !important;
+}
+
+ .servicos-card-header1{
+  background-color:#44691C;
+  color:#fff;
+  margin:0;
+  text-align: center;
+  
+  background: rgb(127,182,68);
+  background: radial-gradient(circle, rgba(127,182,68,1) 50%, rgba(255,117,93,1) 100%);
+ }
+  .servicos-card-header2{
+  background: rgb(127,182,68);
+  background: radial-gradient(circle, rgba(127,182,68,1) 50%, rgba(255,215,0,1) 100%);
+  color:#fff;
+  margin:0;
+  text-align: center;
+  
+ }
+
+.div-feedback{
+display: flex;
+flex-direction: column;
+}
+.img-comms-link{
+margin:0 auto;
+}
+
+.navbar{
+  background-color: #44691C;
+}
+.nav-link{
+  font-size: 16px;
+  color:white !important;
+  border-bottom: 1px solid transparent;
+  font-family: 'gothic';
+ 
+}
+.nav-link:hover{
+  border-bottom:1px solid white;
+}
+
+
+.butn {
+  border-radius: 20px;
+  
+  color: black;
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #441A9C;
+  margin:10px 0px;
+}
+.butn:hover{
+  opacity: 0.90;
+  color:white;
+  
+}
+
+/* Green */
+.zap {
+  border-color: #4CAF50;
+  color: #fff;
+}
+.orcamento{
+  border-color: #4CAF50;
+  color: #fff;
+}
+
+
+
+/*
+--------------------
+-------MAIN-------
+--------------------
 */
 
+.title-cta{
+  color:#248232;
+   font-size: 70px; 
+   font-family: 'Edo';
+   letter-spacing: 4px;
+}
+.cta-title{
+  margin-top: 50vh;
+}
+.pacoteConforto{
+  width:100%;
+
+height: 35vh;
+}
+.pacoteVP{
+
+  width:100%;
+  height: 35vh;
+}
+.show{
+  display:block !important;
+}
+.control {
+ margin: 20px;
+  
+  transition: transform .2s; /* Animation */
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.control:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.container-fade {
+  position: relative;
+  
+  height:400px;
+  display: inline-block;
+  width:300px;
+
+}
+
+.card-text{
+  font-size: 16px;
+}
+.image {
+  display: block;
+  height: 400px;
+  width:  300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width:300px;
+  opacity: 0;
+  transition: .5s ease;
+ 
+ 
+
+}
+
+.container-fade:hover .overlay {
+  opacity: 1;
+   
+}
+
+.text {
+ 
+   
+}
+ .servicos-quicklink-g{
+  min-height:35vh;
+  
+ }
+.servicos-quiclick-w
+{
+  min-height:35vh;
+ 
+}
+
+.servicos-img-left{
+  height:35vh;
+  width:100%;
+  padding-top:15px;
+  
+  
+
+}
+.servicos-img-left img {
+  display:block;
+  margin: 0 auto;
+  max-width: 230px;
+  max-height: 180px;
+}
+
+.servicos-img-left h2{
+  color:#23541D;
+  text-align: center;
+  height:50%;
+  font-family: Edo;
+}
+
+.section-text{
+  margin:0px 150px;
+  color:#8F3E27;
+  background-color:rgba(255,255,255, 0.55);
+
+}
+
+.section-text > h3 {
+  color:#4C7520;
+  
+}
+
+.servicos-img-right{
+ 
+    height:35vh;
+  width:100%;
+  
+}
+.servicos-img-right img {
+  display:block;
+  margin: 0 auto;
+  max-width: 230px;
+  max-height: 180px;
+}
+.servicos-img-right h2{
+  color:white;
+  text-align: center;
+  font-family: Edo;
+  
+ 
+}
+ .servicos-quicklink-g p {
+   color:white;
+   font-weight: 700;
+   font-size: 20px;
+   text-align: center;
+ }
+ .servicos-quicklink-w p {
+  color:#44691C;
+  font-weight: 700;
+  text-align: center;
+ }
+  .main-middle{
+    width:100%;
+    /*height:50vh;*/
+    background-size: cover;
+   
+  }
+  .container-fluid{
+    padding:0 !important;
+  }
+.viagemp-ul{
+  background-color: #3D405B;
+   border-radius:10px;
+    margin:10px;
+}
+.viagemp-ul-itn{
+  line-height: 2em;
+  color:white;
+  font-weight: 700;
+}
+.essencial-ul-itn{
+  margin:10px;
+}
+.fa-custom-big{
+  font-size: 10em;
+  width:100%;
+  text-align: center;
+  color:white;
+}
+  .control{
+    
+    text-align: center;
+   
+  }
+.btn-secondary{
+
+background-color:#44691C;
+}
+.btn-secondary:hover{
+background-color: #1A7527;
+}
+.btn-primary{
+background-color:#44691C;
+}
+
+.txt-comms{
+
+  font-weight: 400;
+  text-align: center;
+  margin:10px 70px;
+}
+.img-comms{
+  display: block;
+  margin: 10px;
+  border-radius:10px;
+  width:200px;
+  float:left;
+}
+
+.mapouter{
+margin: 0 auto;
+}
+
+.divider-collor{
+  background-color:#5B71C1;
+  margin:10px 0px;
+   border-radius: 10px;
+}
+
+.kalina-n-servicos > p { 
+color:#3D4F40; }
+
+.kalina-top{
+  margin:auto 0;
+  text-align: center;
+}
+.kalina-top-img{
+  margin:auto 0;
+}
+
+.institucional-div{
+  max-width:1200px;
+  
+}
+.institucional-block > img {
+  display: block;
+
+}
+.institucional-block {
+  height:33.3vh;
+  margin: auto 0;
+}
+.institucional-block-title {
+  font-size: 2.3em;
+  color:#44691C;
+  
+}
+.institucional-block-quote{
+  font-size: 1.3em;
+  color:#222C29;
+  margin-top: 25px;
+  
+}
+.institucional-block-green{
+ height:auto;
+  color:white;
+  text-align: center;
+}
+.institucional-block-green h2{
+
+color:#44691C;
+}
+.institucional-block-green p{
+font-size: 24px;
+color:#222C22;
+
+}
 
 
-body{
-    font-family: 'Acme', sans-serif;
+.institucional-img{
+  display:block;
+  margin:0 auto;
+  width:300px;
+}
+
+.diferenciais-list{
+  text-align:center;
+  list-style:   none;
+}
+.lista-servicos{
+  margin:10px 0px;
+list-style: square;
+}
+
+.lista-servicos-itn{
+  color:white;
+  font-weight: 700;
+
+}
+
+.lista-topo-servicos{
+  color:white;
+  font-weight:  700;
+}
+.lista-topo-servicos > li {
+padding:10px 0px;
+
+}
+.ltsg{
+  color:#44691C;
+}
+.btn-servicos{
+  width:100%;
+list-style:   none;
+
+}
+.box-servicos-preco{
+  list-style:none;
+}
+.box-servicos-preco li {
+  margin-bottom: 2em;
+}
+
+/*
+--------------------
+-------FOOTER-------
+--------------------
+*/
+.footer__contatos{
+  list-style: none;
+  text-align: initial;
+}
+.footer__contatos > li > a{
+  font-size: 16px;
+  color:white;
+  font-family: 'gothic';
+  padding:5px;
+}
+.logo__footer{
+  display: block;
+  margin:0 auto;
+  width:135px;
+}
+.footer-socials-icons{
+  display:inline-flex;
+  list-style: none;
+  width:100%;
+  justify-content: center;
+  padding:0;
+  
+}
+.footer-socials-icons > li > a {
+  color:#44691C;
+
+}
+.footer-socials-icons > li{
+  padding:20px 15px 0px 15px;
+}
+
+.footer-contato{
+  padding:10px 0px;
 }
 
 .footer-contato-itn{
     list-style: none;
+    padding:5px 15px;
+}
+.footer-contato-link{
+  color:white;
+  font-size: 16px;
+  font-family: 'gothic';
+
+}
+.footer-contato-link:hover{
+  color:white;
+  
+  transition: 0.5s ease;
+   margin-bottom:3px;
+}
+ .main-body{
+  padding:0;
+ }
+
+
+.footer-socials{
+  
+  width:100%;
+  height:200px;
+  list-style: none;
+  
+
+}
+.tabcontent > h3 {
+  margin-top:50px;
+  margin-bottom:15px;
+}
+.footer-socials-itn a{
+  font-size: 18px;
+  color:#44691C;
+  
+}
+.footer-socials-itn{
+  padding:10px 0px;
+}
+
+.fa-custom{
+  font-size: 30px;
+  margin:0px 10px;
+  color:white;
+ 
+}
+.fa-custom:hover{
+  color: #42493A;
+}
+
+
+
+
+
+
+
+.footer-contato{
+    text-align: center;
+}
+
+
+
+/*
+-----------------
+---MEDIA QUERY---
+-----------------
+
+*/
+
+@media(max-width:1024px){
+  .txt-comms h2{
+    font-size: 12px !important;
+  }
+  .txt-comms{
+    margin: 0 auto;
+  }
+  .institucional-block > img{
+    margin:0 auto;
+  }
+
+}
+
+@media(max-width:800px){
+  img{
+    display:block;
+    margin: 0 auto;
+  }
+  .img-fluid{
+    max-width:250px;
+    margin:0 auto;
+    vertical-align: middle;
+    border-style: none
+  }
+
+}
+
+@media(max-width:600px){
+  .footer-socials > li > a{
+    font-size:  16px;
+  }
+  .footer-socials > li{
+    padding:10px 0px;
+  }
+  .institucional-block > img {
+    max-width:100px;
+  }
+  .institucional-block{
+    height:   auto;
+  }
+  .institucional-block-title{
+    margin:10px 0px;
+  }
+  .footer-google{
+    display: none;
+  }
+  .institucional-img{
+    width:120px;
+  }
+  .institucional-block-green  p{
+font-size: 18px;
+margin:0px 5px;
+  }
+  .institucional-block-quote{
+    font-size: 18px;
+  }
+  p, span, a{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  img{
+    display:block;
+    margin:0 auto;
+  }
+
+  @media(max-width:   400px){
+     .footer-socials > li > a{
+    font-size:  14px;
+  }
+  .footer-socials{
+    text-align:   center;
+  }
+
+  }
+
+.footer-socials-itn{
+padding:0px;
+}
+.fa-custom{
+  font-size: 18px;
+}
+p.institucional-block-quote{
+  margin:5px 0px;
+}
+
+
+.tab {
+  float: left;
+  border-top:2px solid #ccc;
+  background-color: #f1f1f1;
+  width:100%;
+  height: auto;
+ 
+}
+
+.exclusividades-color{
+  background-color: #55529E;
+  color:#DE8552;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #44691C;
+  color:white;
+  font-weight: 700;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border-top: 2px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: auto;
+ display:none; 
 }

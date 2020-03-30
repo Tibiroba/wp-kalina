@@ -1,4 +1,4 @@
 <?php 
-
+$slider_title;
 
 ?>

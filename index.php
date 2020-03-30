@@ -1,11 +1,18 @@
 <?php get_header();
+?>
 
-while(have_posts()){
-    the_post();?>
-    <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-    <?php the_content();?>
-    <hr>
+	<div class="container-fluid">
+ <div class="row">
+    <div class="col-12 cta-header-st" style="background-image: url('<?php echo get_stylesheet_directory_uri();?>/img/cta3.jpg'); height:100vh;">
+            <div class="cta-title">
+            <h1 class="title-cta"><?php wp_title();?></h1>
+        </div>
+        </div>
+    </div>
+    </div>
 
-<?php   }
+
+<?php   
 get_footer();
 ?>
+
